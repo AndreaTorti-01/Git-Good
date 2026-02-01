@@ -1,0 +1,74 @@
+:root {
+    --git-orange: #FF6B38;
+    --git-orange-light: #FF8C5A;
+    --git-orange-dark: #E74C1F;
+    
+    /* Docsify-themeable variables */
+    --theme-color: var(--git-orange);
+    
+    /* Blockquote / Handle styling */
+    --blockquote-border-color: var(--git-orange);
+    --blockquote-border-width: 2px;
+    
+    /* Sidebar */
+    --sidebar-nav-link-color--active: var(--git-orange);
+    --sidebar-nav-link-border-color--active: var(--git-orange);
+    --sidebar-border-color: var(--git-orange);
+}
+
+/* Dark mode specific overrides */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Darker background with a touch of warm orange */
+        --base-background-color: #141210;
+        --sidebar-background: #1a1816;
+        
+        /* Fully white text */
+        --base-color: #ffffff;
+        --heading-color: #ffffff;
+        --strong-color: #ffffff;
+        --blockquote-color: #e0e0e0;
+        
+        /* Darker code backgrounds */
+        --code-theme-background: #1e1b19;
+    }
+    
+    body {
+        color: #ffffff !important;
+        background-color: #141210 !important;
+    }
+
+    .sidebar {
+        background-color: #1a1816 !important;
+        color: #ffffff !important;
+    }
+}
+
+/* GitHub Corner Styling */
+/* Docsify's repo corner uses .github-corner */
+.github-corner svg {
+    fill: var(--git-orange) !important;
+    color: var(--base-background-color) !important;
+}
+
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%, 100% { transform: rotate(0) }
+    20%, 60% { transform: rotate(-25deg) }
+    40%, 80% { transform: rotate(10deg) }
+}
+
+/* Ensure links are orange */
+a {
+    color: var(--git-orange) !important;
+}
+
+/* Scrollbar (optional but fits the theme) */
+::-webkit-scrollbar-thumb {
+    background: var(--git-orange);
+}
+
